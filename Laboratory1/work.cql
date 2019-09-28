@@ -1,7 +1,3 @@
-
-///////////////////////INSERT//////////////////
-
-
 INSERT INTO vadim_pits."Products_Characteristic_Store_Recommend"(id_prod, name_prod, colour, price, counter, id_store, name_store, result, final_name_1)
 VALUES (1,{"name": 'Lexus', "model": 'LX350'}, 'white', 30000, 2, 1, 'Japan', {'is available':{'Japan'}}, {"name": 'Lexus', "model": 'LX350'});
 
@@ -13,7 +9,7 @@ VALUES (3,{"name": 'Mazda', "model": '6'}, 'green', 10000, 3, 4, 'UK', {'is avai
 
 SELECT * FROM vadim_pits."Products_Characteristic_Store_Recommend";
 
-///////////////////////UPDATE//////////////////
+
 
 UPDATE vadim_pits."Products_Characteristic_Store_Recommend"
 SET 
@@ -39,21 +35,9 @@ SET
 WHERE id_prod = 2 AND colour = 'black' AND id_store = 2 IF EXISTS;
 
 SELECT * FROM vadim_pits."Products_Characteristic_Store_Recommend";
-/* 
-SELECT name_store 
-FROM vadim_pits."Products_Characteristic_Store_Recommend"
-WHERE  id_prod = 1
-ALLOW FILTERING;
 
-SELECT price 
-FROM vadim_pits."Products_Characteristic_Store_Recommend"
-WHERE  id_prod = 3
-ALLOW FILTERING;
-*/
+        
 
-///////////////////////SELECT//////////////////
-
-CREATE INDEX ind1 on vadim_pits."Products_Characteristic_Store_Recommend"(name_prod);
 
 SELECT name_store, price 
 FROM vadim_pits."Products_Characteristic_Store_Recommend"
@@ -67,13 +51,11 @@ SELECT counter, name_store
 FROM vadim_pits."Products_Characteristic_Store_Recommend"
 WHERE name_prod = {"name": 'BMW', "model": '540'};
 
-CREATE INDEX ind2 on vadim_pits."Products_Characteristic_Store_Recommend"(colour);
-
 SELECT colour, name_prod 
 FROM vadim_pits."Products_Characteristic_Store_Recommend"
 WHERE colour = 'black';
 
-///////////////////////DELETE//////////////////
+
 
 DELETE result
 FROM vadim_pits."Products_Characteristic_Store_Recommend"

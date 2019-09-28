@@ -53,7 +53,6 @@ ALLOW FILTERING;
 
 ///////////////////////SELECT//////////////////
 
-DROP INDEX IF EXISTS ind1;
 CREATE INDEX ind1 on vadim_pits."Products_Characteristic_Store_Recommend"(name_prod);
 
 SELECT name_store, price 
@@ -68,7 +67,6 @@ SELECT counter, name_store
 FROM vadim_pits."Products_Characteristic_Store_Recommend"
 WHERE name_prod = {"name": 'BMW', "model": '540'};
 
-DROP INDEX IF EXISTS ind2;
 CREATE INDEX ind2 on vadim_pits."Products_Characteristic_Store_Recommend"(colour);
 
 SELECT colour, name_prod 

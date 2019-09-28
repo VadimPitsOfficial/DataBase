@@ -24,6 +24,10 @@ CREATE TABLE vadim_pits."Products_Characteristic_Store_Recommend"(
 	PRIMARY KEY((id_prod), colour, id_store)
 	);
 	
+CREATE INDEX ind1 on vadim_pits."Products_Characteristic_Store_Recommend"(name_prod);
+
+CREATE INDEX ind2 on vadim_pits."Products_Characteristic_Store_Recommend"(colour);
+
 	
 	/*
   CREATE TABLE vadim_pits."Products"(

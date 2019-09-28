@@ -17,7 +17,8 @@ SELECT * FROM vadim_pits."Products_Characteristic_Store_Recommend";
 
 UPDATE vadim_pits."Products_Characteristic_Store_Recommend"
 SET 
-  price= 37000
+  price= 37000,
+  name_store = 'USA'
 WHERE id_prod = 1 AND colour = 'white' AND id_store = 1 IF EXISTS;
 
 UPDATE vadim_pits."Products_Characteristic_Store_Recommend"
